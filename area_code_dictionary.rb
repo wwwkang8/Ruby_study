@@ -12,15 +12,16 @@ dial_book = {
 }
 
 # Get city names from the hash
-def get_city_names(somehash)
+def get_city_names(some_hash)
 # Write code here
 # 해쉬의 키들만 모아서 리턴한다.
-  return somehash.keys
+  return some_hash.keys
 end
 
 # Get area code based on given hash and key
 def get_area_code(somehash, key)
 # Write code here
+# if dial_book.include?(key) 이렇게 작성해도 가능.
 
   if somehash.has_key?(key)
     return somehash[key]
@@ -38,7 +39,7 @@ loop do
   city_keys=get_city_names(dial_book)
   puts city_keys
 
-  puts "Write the cityname that you want to know"
+  puts "Enter your selection"
   city_name=gets.chomp
   city_area_code=get_area_code(dial_book, city_name)
 
