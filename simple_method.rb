@@ -81,6 +81,6 @@ def sum(x, y); x+y; end  # 메서드 정의
 puts sum(1, 2)   # 메서드 사용
 undef sum   # 메서드 정의 해제
 
-def sum(x, y); x+y; end 메서드 정의
+def sum(x, y); x+y; end # 메서드 정의
 puts sum(1, 2)
 undef sum #메서드 정의 해제
