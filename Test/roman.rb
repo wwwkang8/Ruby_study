@@ -8,14 +8,16 @@ class Roman
     @value = value
   end
 
-  FACTORS = [["m", 1000], ["cm", 900], ["d", 500], ["cd", 400], ["c", 100], ["xc", 90], ["l", 50], ["xl", 40], ["x", 10], ["ix", 9], ["v", 5], ["iv", 4], ["i", 1]]
+  FACTORS = [["m", 1000], ["cm", 900], ["d", 500], ["cd", 400], ["c", 100], ["xc", 90], ["l", 50], ["xl", 40],
+             ["x", 10], ["ix", 9], ["v", 5], ["iv", 4], ["i", 1]]
 
   def to_s
     value = @value
     roman = ""
     for code, factor in FACTORS
       count, value = value.divmod(factor)
-      roman << (code * count)
+      #roman << (code * count)
+      roman << code unless count.zero?
     end
     roman
   end
