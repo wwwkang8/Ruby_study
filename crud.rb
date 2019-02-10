@@ -33,3 +33,4 @@ def create_secure_users(list_of_users)
 end
 
 puts create_secure_users(users)
+puts create_secure_users(users)
